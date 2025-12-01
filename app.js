@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 //〇追加
 var helloRouter = require('./routes/hello');
 var notesRouter = require('./routes/notes');
+var catRouter = require('./routes/cat');
+var ynRouter = require('./routes/yn');
 
 var app = express();
 
@@ -27,6 +29,8 @@ app.use('/users', usersRouter);
 //〇追加
 app.use('/hello', helloRouter);
 app.use('/notes', notesRouter);
+app.use('/cat',catRouter);
+app.use('/yn',ynRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
